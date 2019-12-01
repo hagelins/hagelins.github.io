@@ -3,43 +3,47 @@ $('.start-container')
     once       : false,
     continuous : true,
     onPassing  : function(calculations) {
-        //setMapsListener();
-        setVisible('.maps-container', calculations.percentagePassed);
+        setVisible('.hours-container', calculations.percentagePassed);
     }
 });
 
-setMapsListener();
-setCardsListener();
+$('.hours-container')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  : function(calculations) {
+        setVisible('.maps-container', calculations.percentagePassed);
+        if (calculations.bottomVisible) setVisible(this, 1);
+    },
+    onBottomPassed : function(calculations) {
+        setVisible(this, 1);
+    }
+});
 
-function setMapsListener() {
-    $('.maps-container')
-    .visibility({
-        once       : false,
-        continuous : true,
-        onPassing  : function(calculations) {
-            //setCardsListener();
-            setVisible('.cards-container', calculations.percentagePassed);
-            if (calculations.bottomVisible) setVisible(this, 1);
-        },
-        onBottomPassed : function(calculations) {
-            setVisible(this, 1);
-        }
-    });
-}
+$('.maps-container')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  : function(calculations) {
+        setVisible('.cards-container', calculations.percentagePassed);
+        if (calculations.bottomVisible) setVisible(this, 1);
+    },
+    onBottomPassed : function(calculations) {
+        setVisible(this, 1);
+    }
+});
 
-function setCardsListener() {
-    $('.cards-container')
-    .visibility({
-        once       : false,
-        continuous : true,
-        onPassing  :  function(calculations) {
-            if (calculations.bottomVisible) setVisible(this, 1);
-        },
-        onBottomPassed : function(calculations) {
-            setVisible(this, 1);
-        }
-    });
-}
+$('.cards-container')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  :  function(calculations) {
+        if (calculations.bottomVisible) setVisible(this, 1);
+    },
+    onBottomPassed : function(calculations) {
+        setVisible(this, 1);
+    }
+});
 
 function setVisible(key, percent) {
     let inverse = 50 - (percent * 100);
