@@ -7,8 +7,12 @@ a {
     color: #DD99BB;
 }
 
+a:hover {
+    color: rgb(185, 120, 152);
+}
+
 .thusand {
-    max-width: 1000px;
+    max-width: 600px;
 }
 
 .bg-container {
@@ -54,8 +58,8 @@ a {
     overflow: hidden;
 }
 
-.cards {
-    color: #000;
+.card .content {
+    color: rgba(0,0,0,0.5);
 }
 
 .maps-container {
@@ -69,4 +73,9 @@ a {
 .hours-container {
     background: #EDE3E4;
     color: #DD99BB;
+}
+
+.hours-container span {
+    width: 130px;
+    display: inline-block;
 }

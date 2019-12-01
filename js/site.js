@@ -11,9 +11,9 @@ $('.hours-container')
 .visibility({
     once       : false,
     continuous : true,
-    onPassing  : function(calculations) {
-        setVisible('.maps-container', calculations.percentagePassed);
-        if (calculations.bottomVisible) setVisible(this, 1);
+    onPassing  : function(c) {
+        setVisible('.maps-container', c.percentagePassed);
+        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassed : function(calculations) {
         setVisible(this, 1);
@@ -24,9 +24,9 @@ $('.maps-container')
 .visibility({
     once       : false,
     continuous : true,
-    onPassing  : function(calculations) {
-        setVisible('.cards-container', calculations.percentagePassed);
-        if (calculations.bottomVisible) setVisible(this, 1);
+    onPassing  : function(c) {
+        setVisible('.cards-container', c.percentagePassed);
+        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassed : function(calculations) {
         setVisible(this, 1);
@@ -37,8 +37,8 @@ $('.cards-container')
 .visibility({
     once       : false,
     continuous : true,
-    onPassing  :  function(calculations) {
-        if (calculations.bottomVisible) setVisible(this, 1);
+    onPassing  :  function(c) {
+        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassed : function(calculations) {
         setVisible(this, 1);
@@ -61,4 +61,8 @@ function setFilter(key, value) {
         .css('mozFilter',value)
         .css('oFilter',value)
         .css('msFilter',value);
+}
+
+if ($(window).width() < 600) {
+    $('.maps-container iframe').css('width', $(window).width() - 20 );
 }
