@@ -1,0 +1,10 @@
+/*******************************
+     User Global Variables
+*******************************/
+@primaryColor   : @pink;
+@secondaryColor : @tea;
+@pink: #DD99BB;
+@tea: #C9F2C7;
+@apple: #ACECA1;
+@green: #379634;
+@white: #F0F3F5;

@@ -1,0 +1,72 @@
+body, html {
+    background: #F0F3F5;
+    color: #F0F3F5;
+}
+
+a {
+    color: #DD99BB;
+}
+
+.thusand {
+    max-width: 1000px;
+}
+
+.bg-container {
+    background-image: url(./../images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.site-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.start-container {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.footer-container {
+    height: 200px;
+    background: #DD99BB;
+}
+
+.cards-container,
+.maps-container {
+    opacity: 0;
+    filter: blur(50px);
+    overflow: hidden;
+}
+
+.cards {
+    color: #000;
+}
+
+.maps-container {
+    background: #C9F2C7;
+}
+
+.cards-container {
+    background: #ACECA1;
+}
+
+.hours-container {
+    background: #EDE3E4;
+    color: #DD99BB;
+}
