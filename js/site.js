@@ -2,8 +2,10 @@ $('.start-container')
   .visibility({
     once       : false,
     continuous : true,
-    onPassing  : function(calculations) {
-        setVisible('.hours-container', calculations.percentagePassed);
+    onPassing  : function(c) {
+        let percent = c.percentagePassed;
+        setVisible('.hours-container', percent);
+        if (percent > 0.5) $(this).css('background', `rgba(0,0,0,${percent})`);
     }
 });
 

@@ -5,6 +5,7 @@ body, html {
 
 a {
     color: #DD99BB;
+    font-weight: bold;
 }
 
 a:hover {
@@ -43,12 +44,28 @@ a:hover {
 }
 
 .start-container {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.5);
 }
 
 .footer-container {
-    height: 200px;
+    padding: 20px;
+    min-height: 200px;
     background: #DD99BB;
+    color: #EDE3E4;
+}
+
+.footer-container a,
+.footer-container .icon {
+    color: #EDE3E4;
+}
+
+.footer-container a:hover {
+    color: rgb(204, 212, 197);
+}
+
+.footer-container .hours span {
+    width: 100px;
+    display: inline-block;
 }
 
 .cards-container,
