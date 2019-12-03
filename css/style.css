@@ -16,6 +16,10 @@ a:hover {
     max-width: 600px;
 }
 
+.center {
+    text-align: center;
+}
+
 .bg-container {
     background-image: url(./../images/bg1.jpg);
     background-size: cover;
@@ -89,8 +93,10 @@ a:hover {
     background: #C9F2C7;
 }
 
+.delivery-container,
 .cards-container {
     background: #ACECA1;
+    color: #292929;
 }
 
 .hours-container {
