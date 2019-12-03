@@ -44,7 +44,13 @@ a:hover {
 }
 
 .start-container {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(221, 153, 187, 0.6);
+    color: #EDE3E4;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.logo-wrapper img {
+    margin: 0 auto;
 }
 
 .footer-container {

@@ -5,7 +5,11 @@ $('.start-container')
     onPassing  : function(c) {
         let percent = c.percentagePassed;
         setVisible('.hours-container', percent);
-        if (percent > 0.5) $(this).css('background', `rgba(0,0,0,${percent})`);
+        if (percent > 0.6) {
+            $(this).css('background', getNewBackgroundAlpha(this, percent));
+        } else {
+            $(this).css('background', getNewBackgroundAlpha(this, 0.6));
+        }
     }
 });
 
@@ -63,6 +67,14 @@ function setFilter(key, value) {
         .css('mozFilter',value)
         .css('oFilter',value)
         .css('msFilter',value);
+}
+
+function getNewBackgroundAlpha(element, percent) {
+    let background = $(element).css('background').match(/rgba\(.*\)/)[0];
+    let alpha = background.split(', ')[3].slice(0, -1);
+    let parts = background.split(alpha);
+    background = parts[0] + percent + parts[1];
+    return background;
 }
 
 if ($(window).width() < 600) {
