@@ -85,10 +85,10 @@ function setFilter(key, value) {
 }
 
 function getNewBackgroundAlpha(element, percent) {
-    let background = $(element).css('background').match(/rgba\(.*\)/);
+    let background = $(element).css('background').match(/rgba\(.*\)/) || $(element).css('background').match(/rgb\(.*\)/);
     if(!background) return false;
   
-    background = background[0];
+    background = background[0].replace('rgb(','rgba(');
     let alpha = background.split(', ')[3].slice(0, -1);
     let parts = background.split(alpha);
     background = parts[0] + percent + parts[1];
