@@ -6,10 +6,11 @@ $('.start-container')
         let percent = c.percentagePassed;
         setVisible('.hours-container', percent);
         if (percent < 0.6) {
-            $(this).css('background', getNewBackgroundAlpha(this, 0.6));
-        } else {
-            $(this).css('background', getNewBackgroundAlpha(this, percent));
+            percent = 0.6;
         }
+        let newBackground = getNewBackgroundAlpha(this, percent);
+        if (newBackground) $(this).css('background', newBackground);
+
         if (!c.bottomVisible && !c.topVisible) $(this).css('background', getNewBackgroundAlpha(this, 0.6));
     }
 });
@@ -84,7 +85,10 @@ function setFilter(key, value) {
 }
 
 function getNewBackgroundAlpha(element, percent) {
-    let background = $(element).css('background').match(/rgba\(.*\)/)[0];
+    let background = $(element).css('background').match(/rgba\(.*\)/);
+    if(!background) return false;
+  
+    background = background[0];
     let alpha = background.split(', ')[3].slice(0, -1);
     let parts = background.split(alpha);
     background = parts[0] + percent + parts[1];
