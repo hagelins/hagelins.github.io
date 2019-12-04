@@ -93,10 +93,15 @@ a:hover {
     background: #C9F2C7;
 }
 
-.delivery-container,
 .cards-container {
     background: #ACECA1;
     color: #292929;
+}
+
+.delivery-container {
+    background: url(./../images/budbil.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .hours-container {
