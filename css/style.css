@@ -20,6 +20,10 @@ a:hover {
     text-align: center;
 }
 
+.shadow {
+    text-shadow: 1px 1px 2px #000000;
+}
+
 .bg-container {
     background-image: url(./../images/bg1.jpg);
     background-size: cover;
@@ -50,7 +54,6 @@ a:hover {
 .start-container {
     background-color: rgba(221, 153, 187, 0.6);
     color: #EDE3E4;
-    text-shadow: 1px 1px 2px #000000;
 }
 
 .logo-wrapper img {
@@ -90,7 +93,7 @@ a:hover {
 }
 
 .maps-container {
-    background: #C9F2C7;
+    background: #008a53;
 }
 
 .cards-container {
