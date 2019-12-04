@@ -3,15 +3,20 @@ $('.start-container')
     once       : false,
     continuous : true,
     onPassing  : function(c) {
-        let percent = c.percentagePassed;
-        setVisible('.hours-container', percent);
-        if (percent < 0.6) {
-            percent = 0.6;
-        }
-        let newBackground = getNewBackgroundAlpha(this, percent);
-        if (newBackground) $(this).css('background', newBackground);
-
-        if (!c.bottomVisible && !c.topVisible) $(this).css('background', getNewBackgroundAlpha(this, 0.6));
+      let percent = c.percentagePassed;
+      setVisible('.hours-container', percent);
+      if (percent < 0.6) {
+          percent = 0.6;
+      }
+      let newBackground = getNewBackgroundAlpha(this, percent);
+      if (newBackground) $(this).css('background', newBackground);
+      if (!c.bottomVisible && !c.topVisible) $(this).css('background', getNewBackgroundAlpha(this, 0.6));
+    },
+    onBottomPassedReverse : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg1.jpg)');
+    },
+    onBottomPassed : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg2.jpg)');
     }
 });
 
@@ -20,11 +25,15 @@ $('.hours-container')
     once       : false,
     continuous : true,
     onPassing  : function(c) {
-        setVisible('.delivery-container', c.percentagePassed);
-        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+      setVisible('.delivery-container', c.percentagePassed);
+      if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
-    onBottomPassed : function(calculations) {
-        setVisible(this, 1);
+    onBottomPassedReverse : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg2.jpg)');
+    },
+    onBottomPassed : function() {
+      setVisible(this, 1);
+      $('.bg-container').css('background-image', 'url(./images/bg3.jpg)');
     }
 });
 
@@ -33,11 +42,15 @@ $('.delivery-container')
     once       : false,
     continuous : true,
     onPassing  : function(c) {
-        setVisible('.maps-container', c.percentagePassed);
-        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+      setVisible('.maps-container', c.percentagePassed);
+      if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
-    onBottomPassed : function(calculations) {
-        setVisible(this, 1);
+    onBottomPassedReverse : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg3.jpg)');
+    },
+    onBottomPassed : function() {
+      setVisible(this, 1);
+      $('.bg-container').css('background-image', 'url(./images/bg4.jpg)');
     }
 });
 
@@ -46,11 +59,15 @@ $('.maps-container')
     once       : false,
     continuous : true,
     onPassing  : function(c) {
-        setVisible('.cards-container', c.percentagePassed);
-        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+      setVisible('.cards-container', c.percentagePassed);
+      if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
-    onBottomPassed : function(calculations) {
-        setVisible(this, 1);
+    onBottomPassedReverse : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg4.jpg)');
+    },
+    onBottomPassed : function() {
+      setVisible(this, 1);
+      $('.bg-container').css('background-image', 'url(./images/bg5.jpg)');
     }
 });
 
@@ -62,8 +79,12 @@ $('.cards-container')
         setVisible('.org-container', c.percentagePassed);
         if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
-    onBottomPassed : function(calculations) {
-        setVisible(this, 1);
+    onBottomPassedReverse : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg5.jpg)');
+    },
+    onBottomPassed : function() {
+      setVisible(this, 1);
+      $('.bg-container').css('background-image', 'url(./images/bg6.jpg)');
     }
 });
 
