@@ -18,6 +18,19 @@ $('.hours-container')
     once       : false,
     continuous : true,
     onPassing  : function(c) {
+        setVisible('.delivery-container', c.percentagePassed);
+        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+    },
+    onBottomPassed : function(calculations) {
+        setVisible(this, 1);
+    }
+});
+
+$('.delivery-container')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  : function(c) {
         setVisible('.maps-container', c.percentagePassed);
         if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
