@@ -77,11 +77,11 @@ function setVisible(key, percent) {
 
 function setFilter(key, value) {
     $(key)
-        .css('filter',value)
-        .css('webkitFilter',value)
-        .css('mozFilter',value)
-        .css('oFilter',value)
-        .css('msFilter',value);
+      .css('filter',value)
+      .css('webkitFilter',value)
+      .css('mozFilter',value)
+      .css('oFilter',value)
+      .css('msFilter',value);
 }
 
 function getNewBackgroundAlpha(element, percent) {
