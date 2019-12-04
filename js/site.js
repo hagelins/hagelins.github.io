@@ -5,12 +5,12 @@ $('.start-container')
     onPassing  : function(c) {
         let percent = c.percentagePassed;
         setVisible('.hours-container', percent);
-        if (percent > 0.6) {
-            $(this).css('background', getNewBackgroundAlpha(this, percent));
-        } else {
+        if (percent < 0.6) {
             $(this).css('background', getNewBackgroundAlpha(this, 0.6));
+        } else {
+            $(this).css('background', getNewBackgroundAlpha(this, percent));
         }
-        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) $(this).css('background', getNewBackgroundAlpha(this, 0.6));
+        if (!c.bottomVisible && !c.topVisible) $(this).css('background', getNewBackgroundAlpha(this, 0.6));
     }
 });
 
