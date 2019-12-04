@@ -10,7 +10,7 @@ $('.start-container')
         } else {
             $(this).css('background', getNewBackgroundAlpha(this, 0.6));
         }
-        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 0.6);
+        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) $(this).css('background', getNewBackgroundAlpha(this, 0.6));
     }
 });
 
