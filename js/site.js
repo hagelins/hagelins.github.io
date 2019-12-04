@@ -89,9 +89,18 @@ function getNewBackgroundAlpha(element, percent) {
     if(!background) return false;
   
     background = background[0].replace('rgb(','rgba(');
-    let alpha = background.split(', ')[3].slice(0, -1);
-    let parts = background.split(alpha);
-    background = parts[0] + percent + parts[1];
+    let parts = background.split(', ');
+    let alpha = parts[3];
+    if (alpha) {
+      alpha = alpha.slice(0, -1);
+      parts = background.split(alpha);
+      background = parts[0] + percent + parts[1];
+    else {
+      parts[2] = parts[2].slice(0, -1);
+      parts.push(percent + ')');
+      background = parts.join(', ');
+    }
+
     return background;
 }
 
