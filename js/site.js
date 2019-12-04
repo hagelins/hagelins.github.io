@@ -59,6 +59,7 @@ $('.cards-container')
     once       : false,
     continuous : true,
     onPassing  :  function(c) {
+        setVisible('.org-container', c.percentagePassed);
         if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassed : function(calculations) {

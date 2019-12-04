@@ -82,7 +82,8 @@ a:hover {
 }
 
 .cards-container,
-.maps-container {
+.maps-container,
+.org-container {
     opacity: 0;
     filter: blur(50px);
     overflow: hidden;
@@ -107,7 +108,8 @@ a:hover {
     background-position: center;
 }
 
-.hours-container {
+.hours-container,
+.org-container {
     background: #EDE3E4;
     color: #DD99BB;
 }
@@ -115,4 +117,9 @@ a:hover {
 .hours-container span {
     width: 130px;
     display: inline-block;
+}
+
+/* bogrönt : #fab300 */
+.org-container img {
+    margin: 0 auto;
 }
