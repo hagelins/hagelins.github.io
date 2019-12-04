@@ -95,7 +95,7 @@ function getNewBackgroundAlpha(element, percent) {
       alpha = alpha.slice(0, -1);
       parts = background.split(alpha);
       background = parts[0] + percent + parts[1];
-    else {
+    } else {
       parts[2] = parts[2].slice(0, -1);
       parts.push(percent + ')');
       background = parts.join(', ');
