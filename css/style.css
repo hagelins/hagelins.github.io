@@ -117,6 +117,7 @@ a:hover {
 .hours-container span {
     width: 130px;
     display: inline-block;
+    text-align: left;
 }
 
 /* bogrönt : #fab300 */
