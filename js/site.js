@@ -88,6 +88,16 @@ $('.cards-container')
     }
 });
 
+$('.org-container')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  :  function(c) {
+        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+    }
+});
+
+
 function setVisible(key, percent) {
     let inverse = 50 - (percent * 100);
     if (inverse < 0) inverse = 0;
