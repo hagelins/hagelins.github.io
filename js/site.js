@@ -94,6 +94,9 @@ $('.org-container')
     continuous : true,
     onPassing  :  function(c) {
         if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+    },
+    onBottomPassed : function() {
+      setVisible(this, 1);
     }
 });
 
