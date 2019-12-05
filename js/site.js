@@ -76,7 +76,6 @@ $('.cards-container')
     once       : false,
     continuous : true,
     onPassing  :  function(c) {
-        setVisible('.org-container', c.percentagePassed);
         if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassedReverse : function () {
@@ -85,18 +84,6 @@ $('.cards-container')
     onBottomPassed : function() {
       setVisible(this, 1);
       $('.bg-container').css('background-image', 'url(./images/bg6.jpg)');
-    }
-});
-
-$('.org-container')
-.visibility({
-    once       : false,
-    continuous : true,
-    onPassing  :  function(c) {
-        if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
-    },
-    onBottomPassed : function() {
-      setVisible(this, 1);
     }
 });
 
