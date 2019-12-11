@@ -98,6 +98,11 @@ a:hover {
     color: #292929;
 }
 
+.collection-container {
+    background: #ACECA1;
+    color: #292929;
+}
+
 .delivery-container {
     background: url(./../images/budbil.jpg);
     background-size: cover;

@@ -25,7 +25,7 @@ $('.hours-container')
     once       : false,
     continuous : true,
     onPassing  : function(c) {
-      setVisible('.delivery-container', c.percentagePassed);
+      setVisible('.collection-container', c.percentagePassed);
       if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassedReverse : function () {
@@ -34,6 +34,23 @@ $('.hours-container')
     onBottomPassed : function() {
       setVisible(this, 1);
       $('.bg-container').css('background-image', 'url(./images/bg3.jpg)');
+    }
+});
+
+$('.collection-container')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  : function(c) {
+      setVisible('.delivery-container', c.percentagePassed);
+      if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
+    },
+    onBottomPassedReverse : function () {
+      $('.bg-container').css('background-image', 'url(./images/bg3.jpg)');
+    },
+    onBottomPassed : function() {
+      setVisible(this, 1);
+      $('.bg-container').css('background-image', 'url(./images/bg4.jpg)');
     }
 });
 
@@ -46,11 +63,11 @@ $('.delivery-container')
       if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassedReverse : function () {
-      $('.bg-container').css('background-image', 'url(./images/bg3.jpg)');
+      $('.bg-container').css('background-image', 'url(./images/bg4.jpg)');
     },
     onBottomPassed : function() {
       setVisible(this, 1);
-      $('.bg-container').css('background-image', 'url(./images/bg4.jpg)');
+      $('.bg-container').css('background-image', 'url(./images/bg5.jpg)');
     }
 });
 
@@ -63,11 +80,11 @@ $('.maps-container')
       if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassedReverse : function () {
-      $('.bg-container').css('background-image', 'url(./images/bg4.jpg)');
+      $('.bg-container').css('background-image', 'url(./images/bg5jpg)');
     },
     onBottomPassed : function() {
       setVisible(this, 1);
-      $('.bg-container').css('background-image', 'url(./images/bg5.jpg)');
+      $('.bg-container').css('background-image', 'url(./images/bg6.jpg)');
     }
 });
 
@@ -79,11 +96,11 @@ $('.cards-container')
         if (c.bottomVisible || !c.bottomVisible && !c.topVisible) setVisible(this, 1);
     },
     onBottomPassedReverse : function () {
-      $('.bg-container').css('background-image', 'url(./images/bg5.jpg)');
+      $('.bg-container').css('background-image', 'url(./images/bg6.jpg)');
     },
     onBottomPassed : function() {
       setVisible(this, 1);
-      $('.bg-container').css('background-image', 'url(./images/bg6.jpg)');
+      $('.bg-container').css('background-image', 'url(./images/bg7.jpg)');
     }
 });
 
