@@ -48,7 +48,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 50px;
 }
 
 .start-container {
@@ -56,28 +56,6 @@ a:hover {
     color: #EDE3E4;
 }
 
-.footer-container {
-    padding: 20px;
-    min-height: 200px;
-    background-color: rgba(221, 153, 187, 0.6);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    color: #EDE3E4;
-}
-
-.footer-container a,
-.footer-container .icon {
-    color: #EDE3E4;
-}
-
-.footer-container a:hover {
-    color: rgb(204, 212, 197);
-}
-
-.footer-container .hours span {
-    width: 100px;
-    display: inline-block;
-    text-align: left;
-}
 /*
 .collection-container,
 .cards-container,
@@ -121,7 +99,34 @@ a:hover {
     display: inline-block;
 }
 
-.footer-container .footer-wrapper .org-wrapper {
+.footer-container {
+    padding: 20px;
+    /*min-height: 200px;*/
+    background-color: rgba(221, 153, 187, 0.6);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    color: #EDE3E4;
+}
+
+.footer-container a,
+.footer-container .icon {
+    color: #EDE3E4;
+}
+
+.footer-container a:hover {
+    color: rgb(204, 212, 197);
+}
+
+.footer-container .hours span {
+    width: 100px;
+    display: inline-block;
+    text-align: left;
+}
+
+.footer-container .footer-wrapper .ui.stackable {
+    min-height: 100vh;
+}
+
+.footer-container .footer-wrapper .hours {
     justify-content: center;
     align-items: center;
     display: flex !important;

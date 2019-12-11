@@ -144,5 +144,5 @@ function getNewBackgroundAlpha(element, percent) {
 }
 */
 if ($(window).width() < 600) {
-    $('.maps-container iframe').css('width', $(window).width() - 20 );
+    $('.maps-container iframe').css('width', $(window).width() - 50 );
 }
