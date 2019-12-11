@@ -59,7 +59,8 @@ a:hover {
 .footer-container {
     padding: 20px;
     min-height: 200px;
-    background: #DD99BB;
+    background-color: rgba(221, 153, 187, 0.6);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     color: #EDE3E4;
 }
 
@@ -77,13 +78,14 @@ a:hover {
     display: inline-block;
     text-align: left;
 }
-
+/*
+.collection-container,
 .cards-container,
 .maps-container {
     opacity: 0;
     filter: blur(50px);
     overflow: hidden;
-}
+}*/
 
 .card .content {
     color: rgba(0,0,0,0.5);

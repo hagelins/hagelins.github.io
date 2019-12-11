@@ -1,4 +1,4 @@
-$('.start-container')
+/*$('.start-container')
   .visibility({
     once       : false,
     continuous : true,
@@ -142,7 +142,7 @@ function getNewBackgroundAlpha(element, percent) {
 
     return background;
 }
-
+*/
 if ($(window).width() < 600) {
     $('.maps-container iframe').css('width', $(window).width() - 20 );
 }
