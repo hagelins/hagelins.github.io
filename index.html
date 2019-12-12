@@ -24,18 +24,6 @@
         <meta name="theme-color" content="#008a53">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-        <link rel="preload" href="./images/collection/binderier.jpg" as="image">
-        <link rel="preload" href="./images/collection/brudbuketter.jpg" as="image">
-        <link rel="preload" href="./images/collection/julgrupper.jpg" as="image">
-        <link rel="preload" href="./images/collection/julstjarnor.jpg" as="image">
-        <link rel="preload" href="./images/collection/kransar.jpg" as="image">
-        <link rel="preload" href="./images/collection/krukvaxter.jpg" as="image">
-        <link rel="preload" href="./images/collection/lokar.jpg" as="image">
-        <link rel="preload" href="./images/collection/pense.jpg" as="image">
-        <link rel="preload" href="./images/collection/perenner.jpg" as="image">
-        <link rel="preload" href="./images/collection/snittblommor.jpg" as="image">
-        <link rel="preload" href="./images/collection/trad.jpg" as="image">
-
     </head>
     <body>
         <div class="bg-container"></div>
@@ -84,7 +72,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/binderier.jpg">
+                    <img class="ui image circular lazyload" data-src="images/collection/binderier.jpg" alt="binderier">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Binderier</div>
@@ -94,7 +82,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/brudbuketter.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/brudbuketter.jpg" alt="brudbuketter">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Brudbukett</div>
@@ -104,7 +92,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/kransar.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/kransar.jpg" alt="arrangemang">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Arrangemang</div>
@@ -114,7 +102,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/krukvaxter.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/krukvaxter.jpg" alt="krukväxter">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Krukor & Krukväxter</div>
@@ -124,7 +112,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/trad.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/trad.jpg" alt="träd">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Buskar, Träd & Häckar</div>
@@ -134,7 +122,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/perenner.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/perenner.jpg" alt="perenner">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Perenner</div>
@@ -144,7 +132,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/pense.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/pense.jpg" alt="pense">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Vårblommor</div>
@@ -154,7 +142,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/julstjarnor.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/julstjarnor.jpg" alt="julstjärnor">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Julblommor</div>
@@ -164,7 +152,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/julgrupper.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/julgrupper.jpg" alt="julgrupper">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Julgrupper</div>
@@ -174,7 +162,7 @@
 
                 <div class="card">
                   <div class="image">
-                    <img class="ui image circular" src="./images/collection/lokar.jpg">
+                    <img class="ui image circular lazyload" data-src="./images/collection/lokar.jpg" alt="lökar">
                   </div>
                   <div class="content">
                     <div class="ui sub header">Lökar & Fröer</div>
@@ -397,6 +385,7 @@
         crossorigin="anonymous"></script>
         <script src="semantic/dist/semantic.min.js"></script>
         <script src="js/site.js"></script>
+        <script src="js/lazysizes.min.js" async></script>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40338932-1"></script>
         <script>
