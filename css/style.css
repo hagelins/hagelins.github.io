@@ -109,6 +109,9 @@ a:hover {
     color: rgb(204, 212, 197);
 }
 
+.footer-container .hours .ui.header {
+    color: #EDE3E4;
+}
 .footer-container .hours span {
     width: 100px;
     display: inline-block;
