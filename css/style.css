@@ -25,7 +25,7 @@ a:hover {
 }
 
 .bg-container {
-    background-image: url(./../images/bg1.jpg);
+    background-image: url(./../images/bg1.webp);
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -63,21 +63,8 @@ a:hover {
     color: #EDE3E4;
 }
 
-/*
-.collection-container,
-.cards-container,
-.maps-container {
-    opacity: 0;
-    filter: blur(50px);
-    overflow: hidden;
-}*/
-
 .card .content {
     color: rgba(0,0,0,0.5);
-}
-
-.maps-container {
-    background: #008a53;
 }
 
 .cards-container {
@@ -86,7 +73,7 @@ a:hover {
 }
 
 .collection-container {
-    background: #ACECA1;
+    background: #008a53;
     color: #292929;
 }
 
@@ -108,7 +95,6 @@ a:hover {
 
 .footer-container {
     padding: 20px;
-    /*min-height: 200px;*/
     background-color: rgba(221, 153, 187, 0.6);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     color: #EDE3E4;
