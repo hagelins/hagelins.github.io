@@ -54,6 +54,10 @@ a:hover {
     padding-right: 20px;
 }
 
+.container .ui.icon.header {
+    margin-bottom: 50px;
+}
+
 .start-container {
     background-color: rgba(221, 153, 187, 0.6);
     color: #EDE3E4;
