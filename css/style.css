@@ -68,13 +68,21 @@ a:hover {
 }
 
 .cards-container {
-    background: #ACECA1;
+    background: #EDE3E4;/*#ACECA1;*/
     color: #292929;
 }
 
+.cards-container .ui.icon.header {
+    color: #DD99BB !important;
+}
+
 .collection-container {
-    background: #008a53;
+    background: #ACECA1;/*#008a53;*/
     color: #292929;
+}
+
+.collection-container .ui.icon.header {
+    color: #008a53 !important;
 }
 
 .delivery-container {
