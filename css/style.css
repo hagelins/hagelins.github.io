@@ -4,12 +4,12 @@ body, html {
 }
 
 a {
-    color: #DD99BB;
+    color: #DD99BB !important;
     font-weight: bold;
 }
 
 a:hover {
-    color: rgb(185, 120, 152);
+    color: rgb(185, 120, 152) !important;
 }
 
 .thusand {
@@ -102,11 +102,11 @@ a:hover {
 
 .footer-container a,
 .footer-container .icon {
-    color: #EDE3E4;
+    color: #EDE3E4 !important;
 }
 
 .footer-container a:hover {
-    color: rgb(204, 212, 197);
+    color: rgb(204, 212, 197) !important;
 }
 
 .footer-container .hours .ui.header {
