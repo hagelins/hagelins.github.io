@@ -25,7 +25,7 @@ a:hover {
 }
 
 .bg-container {
-    background-image: url(./../images/bg1.webp);
+    background-image: url(./../images/bg1.jpg);
     background-size: cover;
     background-position: center;
     position: fixed;
