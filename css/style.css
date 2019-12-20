@@ -139,3 +139,7 @@ a:hover {
 .footer-container .footer-wrapper .org-wrapper img {
     margin-right: 10px;
 }
+
+.ui.fluid.card {
+    height: 100%;
+}
