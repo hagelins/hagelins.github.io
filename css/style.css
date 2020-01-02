@@ -12,7 +12,11 @@ a:hover {
     color: rgb(185, 120, 152) !important;
 }
 
-.thusand {
+.width-450 {
+    max-width: 450px;
+}
+
+.width-600 {
     max-width: 600px;
 }
 
