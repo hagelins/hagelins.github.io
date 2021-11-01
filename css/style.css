@@ -67,6 +67,7 @@ a:hover {
     color: #EDE3E4;
     display: flex;
     flex-direction: column;
+    min-height: 95vh;
 }
 
 .insta-wrapper {
