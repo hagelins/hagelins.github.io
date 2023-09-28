@@ -63,7 +63,7 @@ a:hover {
 }
 
 .start-container {
-    background-color: #2d3239;
+    background-color: rgba(221, 153, 187, 0.6);
     color: #EDE3E4;
     display: flex;
     flex-direction: column;
